@@ -15,14 +15,13 @@ class EditTodoForm extends React.Component {
   }
 
   handleChange(evt) {
-    console.log("a change")
     this.setState({ [evt.target.name ]: evt.target.value })
   }
   render() {
     return (
       <form style={{ display: this.state.isHidden }} onSubmit={this.handleSubmit}>
         <label htmlFor="editTask">Edit Task</label>
-        <input name="editTask" value={this.state.editTask} onChange={this.handleChange} />
+        <input id="editTask" name="editTask" value={this.state.editTask} onChange={this.handleChange} />
         <button>Save</button>
       </form>
     )
